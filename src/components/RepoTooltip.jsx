@@ -30,7 +30,6 @@ class RepoTooltip extends Component {
         const newDate = moment().format('YYYY-MM-DD');
         // GET request using fetch with set headers 
         const headers =  { 
-                'Authorization': 'Token 5f7c6905247ce10949a19ce52d2089e4647f027a',
                 'Accept': 'application/vnd.github.cloak-preview'
             }            
         fetch(`https://api.github.com/search/commits?q=repo:${this.props.reponame}+author-date:%3C${newDate}`, { headers })

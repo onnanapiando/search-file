@@ -52,10 +52,7 @@ export class User extends Component {
     }
 
     componentDidMount() {
-        const headers = {
-            'Authorization': 'Token 5f7c6905247ce10949a19ce52d2089e4647f027a'
-        }
-        fetch(`https://api.github.com/users/${this.props.match.params.username}/repos`, { headers })
+        fetch(`https://api.github.com/users/${this.props.match.params.username}/repos`)
             .then(this.handleResponse)
             .then(
                 data => {
